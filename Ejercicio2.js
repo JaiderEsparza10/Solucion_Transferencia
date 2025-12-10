@@ -1,6 +1,7 @@
 // Importamos la función y los catálogos del módulo.
 import { catalogoA, catalogoB, fusionarCatalogos } from './modules/Catalogos.js';
 
+// Esto permite usar 'prompt' en Node.js
 const prompt = require('prompt-sync')();
 
 console.log("--- Ejecución Exitosa: Fusión y Ordenamiento ---");
