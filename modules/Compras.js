@@ -14,12 +14,12 @@ export function procesarCompra(cliente, productos) {
         // Validar con try…catch que el cliente tenga los dos datos y que los productos sean válidos.
         
         // Validación del Cliente
-        if (!cliente || typeof cliente.nombre !== 'string' || !cliente.nombre || typeof cliente.correo !== 'string' || !cliente.correo) {
+        if (!cliente || typeof cliente.nombre !== "string" || !cliente.nombre || typeof cliente.correo !== "string" || !cliente.correo) {
             throw new Error("El objeto cliente debe contener un 'nombre' y 'correo' válidos.");
         }
         
         // Validación de Productos
-        if (!Array.isArray(productos) || productos.length === 0 || products.some(p => typeof p.nombre !== 'string' || typeof p.precio !== 'number' || p.precio <= 0)) {
+        if (!Array.isArray(productos) || productos.length === 0 || products.some(p => typeof p.nombre !== "string" || typeof p.precio !== 'number' || p.precio <= 0)) {
             throw new Error("La lista de productos debe ser un arreglo no vacío con elementos que contengan 'nombre' (string) y 'precio' (número positivo).");
         }
 
