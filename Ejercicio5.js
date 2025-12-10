@@ -1,8 +1,9 @@
 // Importamos la función y los objetos de configuración de ejemplo desde el módulo.
 import { baseConfig, extraConfig, userConfig, configFinal } from './modules/Configuracion.js';
 
-// Esto permite usar 'prompt' en Node.js
-const prompt = require('prompt-sync')();
+// correción del modulo prompt-sync
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
 
 console.log("--- Ejecución Exitosa: Fusión de Configuraciones ---");
     

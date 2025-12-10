@@ -1,5 +1,7 @@
-import { crearEstudiante } from './Sistema_Registro.js';
-const prompt = require('prompt-sync')();
+import { crearEstudiante } from './modules/Sistema_Registro.js';
+// correción del modulo prompt-sync
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
 
 const nombreEstudiante = prompt("Ingrese el nombre del estudiante:");
     if (!nombreEstudiante) {

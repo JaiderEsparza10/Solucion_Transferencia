@@ -1,8 +1,9 @@
 // Importamos la función y el arreglo de jugadores de ejemplo desde el módulo.
 import { jugadores, estadisticas } from './modules/Deportes.js';
 
-// Esto permite usar 'prompt' en Node.js
-const prompt = require('prompt-sync')();
+// correción del modulo prompt-sync
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
 
 console.log("--- Ejecución Exitosa: Informe Deportivo ---");
     

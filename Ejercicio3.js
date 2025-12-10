@@ -1,10 +1,11 @@
 // Importamos la función y los datos de ejemplo desde el módulo.
 import { clienteEjemplo, productosEjemplo, procesarCompra } from './modules/Compras.js';
 
-// Esto permite usar 'prompt' en Node.js
-const prompt = require('prompt-sync')();
+// correción del modulo prompt-sync
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
 
-console.log("--- 🛒 Ejecución Exitosa: Informe de Compra ---");
+console.log("--- Ejecución Exitosa: Informe de Compra ---");
     
 // Llamada exitosa con los datos de ejemplo importados
 const informeExitoso = procesarCompra(clienteEjemplo, productosEjemplo);
@@ -14,7 +15,7 @@ console.log("Productos:", productosEjemplo.length);
 console.log("\nInforme de Compra (Resultado Esperado):");
 console.log(informeExitoso);
     
-console.log("\n--- 🛑 Prueba de Manejo de Errores ---");
+console.log("\n--- Prueba de Manejo de Errores ---");
     
 // 1. Prueba de Error: Cliente Inválido (usando prompt para simular datos nulos)
 const nombreError = prompt("Prueba de Error: Ingrese un nombre de cliente (deje vacío para forzar error):");
